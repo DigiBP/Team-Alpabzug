@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1ltgt3k" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.4.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1poaheh" name="TypeOfRequest">
+    <decisionTable id="DecisionTable_0r9gx17" hitPolicy="FIRST">
+      <input id="Input_1" label="intent" biodi:width="150">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>intent</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ukdcdc" label="appointment_type" biodi:width="171">
+        <inputExpression id="LiteralExpression_0j132xd" typeRef="string">
+          <text>appointment_type</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_12tmfw3" label="document_type">
+        <inputExpression id="LiteralExpression_111v1of" typeRef="string">
+          <text>document_type</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0om986o" label="patient_type" biodi:width="150">
+        <inputExpression id="LiteralExpression_0z73b2m" typeRef="string">
+          <text>patient_type</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07uufn6" label="physicianName">
+        <inputExpression id="LiteralExpression_1uwv0o5" typeRef="string">
+          <text>physicianName</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="typeOfRequest" name="typeOfRequest" typeRef="string" biodi:width="150" />
+      <output id="OutputClause_1x8h03z" label="nursesTime" name="nursesTime" typeRef="integer" biodi:width="150" />
+      <output id="OutputClause_1ssov5u" label="doctorsTime" name="doctorsTime" typeRef="string" biodi:width="150" />
+      <output id="OutputClause_1ky8oe6" label="labTest" name="labTest" typeRef="boolean" biodi:width="150" />
+      <output id="OutputClause_0aby38r" label="physicianName" name="physicianName" typeRef="string" />
+      <output id="OutputClause_15j1cmg" label="physicianEmail" name="physicianEmail" typeRef="string" />
+      <rule id="DecisionRule_1htelky">
+        <inputEntry id="UnaryTests_1uf7tlt">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00ol5ha">
+          <text>"short"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0656et7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14wqh54">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tjbfsy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c7e0m4">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ao2z66">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13e8rdj">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15c46g6">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tjjsqe">
+          <text>"random"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18uujvq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fme0cc">
+        <inputEntry id="UnaryTests_1lu5muc">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rh6jnd">
+          <text>"standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uhcbjf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13r177k">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z21pb6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kday6p">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i0nf6k">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x3fw99">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c5ssx3">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uvau1l">
+          <text>"random"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nmz74d">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rlfljo">
+        <inputEntry id="UnaryTests_1q7u9qq">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f8r6nz">
+          <text>"checkup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pslovn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0clbhev">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11w8il5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0d38jm5">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l8eb2b">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11cswop">
+          <text>30</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1crie3z">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_147u6l3">
+          <text>"random"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yo1ss4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qnrsge">
+        <inputEntry id="UnaryTests_1iurajh">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cdvdlu">
+          <text>"short"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a0f85o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hcrohe">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14u6ah7">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0g07nm0">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tf3u8h">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pfvyuj">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09p76yc">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0342t4j">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vxy3r4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1946kac">
+        <inputEntry id="UnaryTests_1ja8yxp">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06dj1n4">
+          <text>"standard","appointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06q7def">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r6px0b">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yh0hdm">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qc5u7v">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gukxjw">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iuvkuo">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15awuyk">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i9u60u">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12fcxsh">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lv5ypp">
+        <inputEntry id="UnaryTests_0jv9bmb">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07rjh4j">
+          <text>"checkup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ky2odk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_146uvam">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bsyhvu">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1plt1qe">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gklx8d">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19bxyfr">
+          <text>30</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u07aem">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13p7ws6">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tkgwmc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w1txi7">
+        <inputEntry id="UnaryTests_1abd1wo">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wdjdto">
+          <text>"short"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cmd670">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pplk07">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dk4712">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1trt2qj">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mqfj10">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hjuatn">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ejl4ae">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02miv5i">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sqsnf0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1v8h6dn">
+        <inputEntry id="UnaryTests_1rcqk3p">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ww5tq">
+          <text>"standard","appointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s6r9w7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bmhmnu">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19gikt5">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bosf5a">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lwnaeu">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0anmzcp">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u4g48j">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n19icv">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wyh58w">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eprzj1">
+        <inputEntry id="UnaryTests_0j5p4yu">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vwk94v">
+          <text>"checkup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0klnzqo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rq7keg">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mja64y">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iyqowb">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0muqr8y">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u8vvze">
+          <text>30</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d11l0c">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fcial9">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xde9yy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xh2r7d">
+        <inputEntry id="UnaryTests_08h6gn2">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16f9gdq">
+          <text>"short"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l9wlei">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n5cf8m">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00t15c2">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09e5se1">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_080fa9e">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_064zp27">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y8rh96">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u98x4n">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i6mc20">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mm3r3t">
+        <inputEntry id="UnaryTests_0ykrx4z">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lrpc2z">
+          <text>"standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14gzjja">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00k6jja">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6nb91">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ahnhg2">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qr94z6">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a00uoj">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u7bp9c">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m2jtm8">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16tpmac">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jajml6">
+        <inputEntry id="UnaryTests_057s60w">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dyfx4e">
+          <text>"checkup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iqvbfq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09pg9wv">
+          <text>"new"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fe5xfy">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1inpebw">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yefvf1">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02ciym8">
+          <text>30</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ibux7q">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uavi1n">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mt60i3">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_193a9np">
+        <inputEntry id="UnaryTests_0e62wd0">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06xr445">
+          <text>"short"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01hdb9p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nkkj4u">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12fpdla">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u71v9g">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05cpmlw">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p56hq6">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g9wyck">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f6kxnz">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03pvday">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m8vy7z">
+        <inputEntry id="UnaryTests_0jts2q7">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d9ksx7">
+          <text>"standard"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_190g7r1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gcct12">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ftro3h">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q0inh8">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hjq89i">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rkp03z">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zi30yo">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bq81ej">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gxrnkz">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g503x8">
+        <inputEntry id="UnaryTests_0becytd">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0chthka">
+          <text>"checkup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mssu75">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1of9qjf">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xo0wja">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x9uxar">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i8p3yu">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f843sg">
+          <text>30</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gxognz">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17tji6g">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rzxgrr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gb7lyz">
+        <inputEntry id="UnaryTests_1hnxz8d">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_174oc30">
+          <text>"vaccination"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ti7qmq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1juj3uj">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11q3gr9">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q5gvlq">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xyguwz">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uvg5gs">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eku2b7">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m5qza0">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10kva2t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_049929d">
+        <inputEntry id="UnaryTests_0bok6lp">
+          <text>"getAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lakyke">
+          <text>"vaccination"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fqf97x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fvnvxy">
+          <text>"known"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11hq8pw">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wmd7sj">
+          <text>"appointment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dq4jlv">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xcge7u">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o3ndlk">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0958p2z">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19i8ttk">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hsby6u">
+        <inputEntry id="UnaryTests_1wop8y7">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i50im1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pgwwy7">
+          <text>"sick note"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vvb2h1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u9f1sd">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fog7kq">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jct28h">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qslnxi">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0payn2t">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00cko9t">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s00smc">
+          <text>"hantke@hin.ch"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gl1sky">
+        <inputEntry id="UnaryTests_14nwuuc">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fq79se">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1evyamd">
+          <text>"referral"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cdr3bg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ppqcoc">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s4n7h6">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0520mj6">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18js7x9">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gtu69j">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0igdcga">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bz8t1j">
+          <text>"hantke@hin.ch"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18udk6w">
+        <inputEntry id="UnaryTests_1cuywn0">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wwpl1p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05hyres">
+          <text>"sick note"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04g8tjc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01b2j0r">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01ajyo7">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wbpho0">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ileoeh">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ez2bi">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rpmjg0">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wypsd6">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0accgrl">
+        <inputEntry id="UnaryTests_0f40izj">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00geano">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g0rv4m">
+          <text>"referral"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t5nmes">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19bcf9i">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qbfbc4">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j6lgn8">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x8narv">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nqc0db">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0em6957">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16yban4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_003isjl">
+        <inputEntry id="UnaryTests_0cdv9k5">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1exzbht">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l9nreg">
+          <text>"prescription"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wqvuav">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r0m1kd">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tvx9bz">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_072exw4">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ym8cym">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0txjn66">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15whyu0">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uuvs0g">
+          <text>"hantke@hin.ch"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ig1tih">
+        <inputEntry id="UnaryTests_12e2wy8">
+          <text>"getDocument"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a1dhpo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e2ikk5">
+          <text>"prescription"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06xjof3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ldknsu">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bqzxih">
+          <text>"document"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sz1kbe">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05wk49a">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m6tycv">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05p0awn">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bqhj8w">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xoicsk">
+        <inputEntry id="UnaryTests_1fsw9o0">
+          <text>"getMedication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lno0ne">
+          <text>"medication pickup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iuxdrn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e3nsbl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_149159q">
+          <text>"Hantke"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqgbx5">
+          <text>"medication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a3izmw">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hj5l9z">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ea44w0">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jorbni">
+          <text>"Hantke"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fdyinw">
+          <text>"hantke@hin.ch"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1resbyc">
+        <inputEntry id="UnaryTests_0ltd0sw">
+          <text>"getMedication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gzyqmx">
+          <text>"medication pickup"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ccyy89">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q7sjdw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nwubhj">
+          <text>"Pluess"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eul69o">
+          <text>"medication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oo9a9j">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zpdz46">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gdatnt">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wdgbeb">
+          <text>"Pluess"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i246qx">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16dr7hq">
+        <inputEntry id="UnaryTests_0hn30sb">
+          <text>"cancelAppointment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1083e5a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04w2mpj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fo434i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jjpcvl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07gr6dc">
+          <text>"cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g6dipd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pyt8nt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m5kxj0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1is2vax">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uxdr4f">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1poaheh">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

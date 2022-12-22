@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0h1kwtu" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.4.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:collaboration id="Collaboration_1971217">
+    <bpmn:participant id="Participant_11ke7sb" name="Patient" processRef="Process_024sfay" />
+    <bpmn:participant id="Participant_01fuajj" name="GP praxis" processRef="Process_1tnmtp0" />
+    <bpmn:participant id="Participant_1e2gmjg" name="Laboratory (external)" processRef="Process_06oirns" />
+    <bpmn:participant id="Participant_0pqchha" name="Insurance" processRef="Process_1qdag1s" />
+    <bpmn:participant id="Participant_16oxkcx" name="Specialist" processRef="Process_0qkf5az" />
+    <bpmn:participant id="Participant_0kb2t7j" name="Spitex" processRef="Process_1sxflln" />
+    <bpmn:participant id="Participant_00yywb0" name="Senior Residence" processRef="Process_0d6h8cw" />
+    <bpmn:participant id="Participant_0afp2l7" name="Hospital" processRef="Process_1rln78o" />
+    <bpmn:participant id="Participant_0vtveoo" name="Pharmacy (external)" processRef="Process_17ng476" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_024sfay" isExecutable="true" />
+  <bpmn:process id="Process_1tnmtp0" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_09rs0se">
+      <bpmn:lane id="Lane_1aj42ve" name="Reception" />
+      <bpmn:lane id="Lane_0a0aohy" name="Nurse" />
+      <bpmn:lane id="Lane_1272gsf" name="Laboratory (internal)" />
+      <bpmn:lane id="Lane_1szxgdb" name="Doctor" />
+      <bpmn:lane id="Lane_0md2v56" name="Practice Pharmacy (robot)" />
+    </bpmn:laneSet>
+  </bpmn:process>
+  <bpmn:process id="Process_06oirns" isExecutable="false" />
+  <bpmn:process id="Process_1qdag1s" isExecutable="false" />
+  <bpmn:process id="Process_0qkf5az" isExecutable="false" />
+  <bpmn:process id="Process_1sxflln" isExecutable="false" />
+  <bpmn:process id="Process_0d6h8cw" isExecutable="false" />
+  <bpmn:process id="Process_1rln78o" isExecutable="false" />
+  <bpmn:process id="Process_17ng476" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1971217">
+      <bpmndi:BPMNShape id="Participant_00yywb0_di" bpmnElement="Participant_00yywb0" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="600" height="70" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0kb2t7j_di" bpmnElement="Participant_0kb2t7j" isHorizontal="true">
+        <dc:Bounds x="160" y="175" width="600" height="60" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0vtveoo_di" bpmnElement="Participant_0vtveoo" isHorizontal="true">
+        <dc:Bounds x="160" y="270" width="600" height="90" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_11ke7sb_di" bpmnElement="Participant_11ke7sb" isHorizontal="true">
+        <dc:Bounds x="160" y="390" width="600" height="60" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_01fuajj_di" bpmnElement="Participant_01fuajj" isHorizontal="true">
+        <dc:Bounds x="160" y="480" width="600" height="570" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1aj42ve_di" bpmnElement="Lane_1aj42ve" isHorizontal="true">
+        <dc:Bounds x="190" y="480" width="570" height="90" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0a0aohy_di" bpmnElement="Lane_0a0aohy" isHorizontal="true">
+        <dc:Bounds x="190" y="570" width="570" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1272gsf_di" bpmnElement="Lane_1272gsf" isHorizontal="true">
+        <dc:Bounds x="190" y="690" width="570" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1szxgdb_di" bpmnElement="Lane_1szxgdb" isHorizontal="true">
+        <dc:Bounds x="190" y="810" width="570" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0md2v56_di" bpmnElement="Lane_0md2v56" isHorizontal="true">
+        <dc:Bounds x="190" y="930" width="570" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1e2gmjg_di" bpmnElement="Participant_1e2gmjg" isHorizontal="true">
+        <dc:Bounds x="160" y="1080" width="600" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0pqchha_di" bpmnElement="Participant_0pqchha" isHorizontal="true">
+        <dc:Bounds x="160" y="1190" width="600" height="90" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_16oxkcx_di" bpmnElement="Participant_16oxkcx" isHorizontal="true">
+        <dc:Bounds x="160" y="1310" width="600" height="100" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0afp2l7_di" bpmnElement="Participant_0afp2l7" isHorizontal="true">
+        <dc:Bounds x="160" y="1460" width="600" height="90" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0xpx9je" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.5.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:process id="GetMiDASRequest" name="GetMiDASRequest" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_180ne0f</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1nsn4mt">
+      <bpmn:incoming>Flow_148gphq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_180ne0f" sourceRef="StartEvent_1" targetRef="view_MiDAS_Info" />
+    <bpmn:sequenceFlow id="Flow_04d5ize" sourceRef="view_MiDAS_Info" targetRef="Activity_1dob2z8" />
+    <bpmn:sequenceFlow id="Flow_148gphq" sourceRef="Activity_1dob2z8" targetRef="Event_1nsn4mt" />
+    <bpmn:manualTask id="Activity_1dob2z8" name="Fulfill Patient Request">
+      <bpmn:incoming>Flow_04d5ize</bpmn:incoming>
+      <bpmn:outgoing>Flow_148gphq</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="view_MiDAS_Info" name="view MiDAS Info">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="LastName" label="Last Name" type="string" />
+          <camunda:formField id="FirstName" label="First Name" type="string" />
+          <camunda:formField id="Birthdate" label="Birthdate" type="string" />
+          <camunda:formField id="AppointmentType" label="Appointment Type" type="string" />
+          <camunda:formField id="AppointmentUrgency" label="Appointment Urgency" type="string" />
+          <camunda:formField id="PatEmail" label="Patient Email" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_180ne0f</bpmn:incoming>
+      <bpmn:outgoing>Flow_04d5ize</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="GetMiDASRequest">
+      <bpmndi:BPMNShape id="BPMNShape_0k8vk3g" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="452" y="475" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0tze6z3" bpmnElement="Event_1nsn4mt">
+        <dc:Bounds x="612" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="913" y="475" width="74" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0zjnptj_di" bpmnElement="Activity_1dob2z8">
+        <dc:Bounds x="430" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17qye0v_di" bpmnElement="view_MiDAS_Info">
+        <dc:Bounds x="260" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_13g64ny" bpmnElement="Flow_180ne0f">
+        <di:waypoint x="188" y="120" />
+        <di:waypoint x="260" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_0bb5vcd" bpmnElement="Flow_04d5ize">
+        <di:waypoint x="360" y="120" />
+        <di:waypoint x="430" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1mq0pu3" bpmnElement="Flow_148gphq">
+        <di:waypoint x="530" y="120" />
+        <di:waypoint x="612" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
